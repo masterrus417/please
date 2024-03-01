@@ -1,0 +1,118 @@
+.navbar-brand {
+  color: #fffefe;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 24px;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); */
+} 
+
+.card-link{
+	font-size: 14px;
+	text-align: center;
+}
+
+/* работает не во всех браузерах */
+datalist option{
+	color: black !important;
+	background-color: azure;
+}
+
+#inputSearch{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 400px;
+}
+
+.form-label{
+	display: block;
+	font-weight: bold;
+}
+
+.select {
+	font-size: 16px;
+	width: 300px;
+}
+
+button{
+	width: 120px;
+}
+
+datalist {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+input{
+	overflow-y: auto;
+}
+
+th.text-center{
+	text-align: center;
+}
+
+
+.col-number{
+	text-align: right;
+}
+
+.ellipsis{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.th-custom-bold{
+	font-size: 14px;
+	text-align: center;
+	font-weight: bold;
+	border: 1px;
+}
+
+.fixed-table{
+	table-layout: fixed;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-row-size{
+	font-size: small;
+}
+
+#message{
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+	z-index: 9999;
+	display: none;
+}
+
+.mtr-code{
+	color: midnightblue;
+	font-weight: bold;
+}
+
+.department{
+	color: firebrick;
+	font-weight: bold;
+}
+
+.custom-date{
+	color: darkcyan;
+	font-weight: bold;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #918e8e;
+}
+
+thead{
+	position: sticky;
+	top: 0;
+	background:white;
+	z-index: 10;
+}

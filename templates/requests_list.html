@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% comment %} {% load custom_filters %} {% endcomment %}
+{% comment %} {% load humanize %} {% endcomment %}
+{% csrf_token %}
+<div class="contaner-fluid">
+    <div class="label align-content-center justify-content-start" style="font: 2em sans-serif;">Список заявок на подбор персонала</div>
+    <div id="tableContainer" class="row">
+        <div class="col-8">
+            <div class="table-header">	
+                <table class="table table-hover">
+                    <thead class="table-active">
+                        <tr>
+                            {% for label in labels_list %}
+                                <th class="th-custom-bold" >{{label}}</th>
+                            {% endfor %}
+                            <th>Открыть</th>
+                        </tr>
+                    </thead>
+                    <tbody id="container_row">
+                        {% for key,val in requsets_values.items %}
+                        <tr>
+                            {% for s in val%}
+                                <td>{{s}}</td>
+                            {% endfor %}
+                            <td><button class="btn btn-primary">Открыть</button></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> 
+{% endblock content %}

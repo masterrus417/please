@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+{% comment %} {% load custom_filters %} {% endcomment %}
+{% comment %} {% load humanize %} {% endcomment %}
+{% csrf_token %}
+<div class="contaner-fluid">
+    <div class="label align-content-center justify-content-start" style="font: 2em sans-serif;">Заявка на подбор персонала</div>
+    <div id="requestContainer" class="row">
+    </div>
+</div> 
+{% endblock content %}

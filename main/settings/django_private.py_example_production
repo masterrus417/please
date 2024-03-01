@@ -1,0 +1,38 @@
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '<YOUR_APPLICATION_DJANGO_SECRET>'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'eci-db1-dev.eci.local',
+        'PORT': '5432',
+        'NAME': 'cscd',
+        'SCHEME': 'auth',  # for future references
+        'USER': 'django_auth_user',  # alter user django_auth_user set search_path to auth
+        'PASSWORD': 'django_auth_user',
+    },
+    'ref_user': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST': 'eci-db1-dev.eci.local',
+        'PORT': '5432',
+        'NAME': 'cscd',
+        'SCHEME': 'sc_acc',  # for future references
+        'USER': 'django_auth_user',
+        'PASSWORD': 'django_auth_user',
+    },
+}
+
+# The parameter controls the ability to
+# automatically create a user if he is unknown
+
+
+# Authentication
+# HTTP_X_REMOTE_USER в окружении Apache
+# LOGNAME в окружении manage.py
+REMOTE_USER_HEADER = 'HTTP_X_REMOTE_USER'
